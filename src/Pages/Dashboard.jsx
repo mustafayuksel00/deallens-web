@@ -11,7 +11,7 @@ export default function Dashboard(){
  useEffect(()=>{if(deleting)deletion.current.showModal();},[deleting]);
  const apply=next=>{if(initial.error){setStorageError('Depolama hatası çözülmeden mevcut verinin üzerine yazılamaz.');return false;}const error=save(localStorage,next);setStorageError(error);if(error)return false;setRecords(next);return true;};
  const closeForm=()=>{setFormOpen(false);setEditing(null);requestAnimationFrame(()=>addButton.current?.focus());};
- const upsert=value=>{const next=editing?records.map(r=>r.id===editing.id?{...r,...value,updatedAt:new Date().toISOString()}:r):[{...value,id:crypto.randomUUID(),updatedAt:new Date().toISOString()},...records];if(apply(next)){setNotice(editing?'Kayıt güncellendi.':'Şirket eklendi.');closeForm();}};
+ const upsert=value=>{const next=editing?records.map(r=>r.id===editing.id?{...r,...value,updatedAt:new Date().toISOString()}:r):[{...value,id:crypto.randomUUID(),updatedAt:new Date().toISOString()},...records];if(apply(next)){setNotice(editing?'Kayıt güncellendi.':'Şirket eklendi.');closeForm();return true;}return false;};
  const remove=()=>{if(apply(records.filter(r=>r.id!==deleting.id))){setNotice('Şirket silindi.');setDeleting(null);}};
  const filtered=records.filter(r=>r.name.toLocaleLowerCase('tr-TR').includes(query.trim().toLocaleLowerCase('tr-TR'))&&(sector==='Tümü'||r.sector===sector)&&(stage==='Tümü'||r.stage===stage));
  const exportData=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(records,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='deallens-sirketler.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setNotice('Kayıtların yedeği indirildi.');};

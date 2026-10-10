@@ -4,6 +4,7 @@ Başarı: ekle/listele/güncelle/sil; kalıcı localStorage; doğrulama, arama/f
 1. [x] Resmî yönerge/kapsam: React + CSS + localStorage, şirket inceleme takibi.
 2. [x] Uygulama ve veri doğrulaması.
 3. [x] Otomatik ve tarayıcı kontrolleri, mobil görünüm.
-4. [ ] Public GitHub, canlı yayın, teslim ZIP ve kayıtlar.
+4. [x] Public GitHub, canlı yayın, teslim ZIP ve kayıtlar.
 Kapsam dışı: canlı ML tahmini, gerçek şirket verisi, ücretli servis, dört proje birleşimini şimdi tamamlamak, resmî form gönderimi. Ortak arayüz daha sonra genişletilebilir.
+
 

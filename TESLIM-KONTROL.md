@@ -10,7 +10,7 @@
 - [x] Ekran görüntüleri screenshots altında.
 - [x] Public GitHub deposu ve son kaynak eşliği.
 - [x] Canlı yayın ve sayfanın çalıştığı doğrulandı.
-- [ ] Teslim ZIP kontrolü.
+- [x] Teslim ZIP kontrolü.
 - [ ] Mustafa'nın kendi anlatım/kavrayış kontrolü.
 - [ ] Dört projenin tek resmî formdan gönderilmesi.
 
@@ -18,4 +18,5 @@ Son tarih19 Ekim2026 23.59. Resmî kaynak: ../software-persona-training/official
 
 Canlı: https://mustafayuksel00.github.io/deallens-web/
 Kaynak: https://github.com/mustafayuksel00/deallens-web
+
 

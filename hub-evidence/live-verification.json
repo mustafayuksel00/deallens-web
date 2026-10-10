@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-11",
+  "url": "https://mustafayuksel00.github.io/deallens-web/",
+  "deployment_commit": "c426ccc0cc72de5cb3df761153ffe37a9ddaa040",
+  "deployment_run": 38079666528,
+  "deployment_conclusion": "success",
+  "all_live_assets_verified": true,
+  "asset_count": 25,
+  "browser": {
+    "simple_example_score": "0.1721",
+    "pro_example_score": "0.0017",
+    "mode_switch": "passed",
+    "console_errors": [],
+    "final_page": "Basit / Başlangıç",
+    "screenshot": "hub-live.png"
+  },
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "181e1292b653e431b6e501d3a18aed2f71852f5a01eb873a1e239de65fdb0360",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "assets/index-DBrR9YA8.css",
+      "sha256": "d0a33108a1bdb9064822597eafbf1bc4eb0b50c68dd2e9109bcf86cfc8a60ba4",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "assets/index-Fn-jhAWs.js",
+      "sha256": "03a6f43171cd2dbaf3c1dc69086a5e1b17d7fdfec4fdd1fce261ea02aa481569",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "assets/vendor-CnzLXlvJ.js",
+      "sha256": "cb28a45b0a7c1edf520373cacdba8e4e66bc512cf64220044dec8a1421556795",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "files/ML_Notebook.ipynb",
+      "sha256": "d2e78589c8ee27c23585c6e980bc97a04620c3993e29a996bed72711041f1e16",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "files/ML_Rapor.pdf",
+      "sha256": "afd813ff70c96fc2f21d65819690da9f5773119982a44ff745937f8aa6cfe103",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "files/Oran_Sozlugu.csv",
+      "sha256": "f6b6a3d1c6e91cfde6bc84205dd4967f67ded981bd62e827ce69551f5d8c76bf",
+      "bytes_identical": false,
+      "only_line_endings_differ": true
+    },
+    {
+      "file": "files/Ornek_64_Oran.csv",
+      "sha256": "9e3d0b3d3dc12163c1798bf141c04b5524d16f34193ee348b1ab98e525f19c78",
+      "bytes_identical": false,
+      "only_line_endings_differ": true
+    },
+    {
+      "file": "files/Python_Notebook.ipynb",
+      "sha256": "ee5157cfe68923537e38d99d646f0c7be2ee3d232e2553e28af40d2d30d38629",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "files/Python_Rapor.pdf",
+      "sha256": "93af044f91a4fede934983be72fa06400bb0c142062ab32f7d0c5af0bf42a9c3",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "files/Python_Sunum.pptx",
+      "sha256": "fbc0d2d8c0a1f24670174e057e1f5f076687ba286c4c451c26a002ad38951605",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/documents/DealLens_7_Gunluk_Takvim.xlsx",
+      "sha256": "e21bf653086c8c1c4dc88cd903c2719f802ca5ece4e6a29add01ddfd6a07fcaa",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/documents/DealLens_ContentFlow_Sunum.pdf",
+      "sha256": "90e0828d6481b8e3a2f7cb2e75403e3fe2f7077609a8a05ae11de4f0807187ae",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/documents/DealLens_Marka_Sesi.pdf",
+      "sha256": "88d5d341e3cccd61c428fab9714ee8afb2dad5932af395e9494527b104e4537e",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/documents/DealLens_Marka_Stratejisi.pdf",
+      "sha256": "ed1ab3b88e217108066449545f6ba9843a1d8308fae3581d6db8af3cd6a22534",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/documents/DealLens_Ornek_Icerik_Seti.pdf",
+      "sha256": "488601c885715f9f016b0a2f383415293246dd1ca077f1682575fbf876492d0c",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/media/altyazi.ass",
+      "sha256": "ad8787c06b8ec3a7a1eeca20f3f8436578922a56a06abc50f9a682c12d7f183b",
+      "bytes_identical": false,
+      "only_line_endings_differ": true
+    },
+    {
+      "file": "content/media/altyazi.srt",
+      "sha256": "27f4223aeef56bc27af9ab5707c3b9ad21828a8623614d35f18ed45a60095fba",
+      "bytes_identical": false,
+      "only_line_endings_differ": true
+    },
+    {
+      "file": "content/media/gorsel-01.png",
+      "sha256": "de2a098c84d0f7d3c862daa78e16f49acaa88e4358e795c82ce55f5aa5e06ac0",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/media/gorsel-02.png",
+      "sha256": "2db5704afdd183bc2f81ade9887d678ce6859fac11e49434a39ed737188ae007",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/media/gorsel-03.png",
+      "sha256": "192585cf2ce0ba974e2c0150e77f42902a54a4eada6df121d305753bf5562e0a",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/media/seslendirme.mp3",
+      "sha256": "2b903575b16c1c2b17ef9b7ce3aca95bf05753a1aa74be7cc8a1930d14a3a339",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/media/seslendirme.vtt",
+      "sha256": "2568cbc6e0f4a46580e12e0c20d46a25d9ecc571e84f211bbe592f42b220270b",
+      "bytes_identical": false,
+      "only_line_endings_differ": true
+    },
+    {
+      "file": "content/media/tanitim-18sn.mp4",
+      "sha256": "177116e46cd11822cbe1b5b5ffa63d9ee3278c543393268d275c829be3af739c",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    },
+    {
+      "file": "content/media/video-poster.jpg",
+      "sha256": "51b5ec3b9068f1d9304ef8be749c1fdcb3794d7ac4dfcc3b16cb7c113ddd7b49",
+      "bytes_identical": true,
+      "only_line_endings_differ": false
+    }
+  ]
+}

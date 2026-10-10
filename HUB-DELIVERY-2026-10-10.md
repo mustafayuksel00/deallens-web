@@ -21,3 +21,8 @@ Yerel paket: DealLens_Birlesik_Basit_Pro.zip. Çıkar, DealLens-Baslat.bat çift
 Eski deallens-companies-v1 anahtarı korunur; şirket kayıtları silinmez/otomatik taşınmaz. Girdiler tarayıcıda hesaplanır; şirket/finans kayıtları sunucuya gönderilmez. Farklı site/yerel adres/cihaz ayrı depolamadır. JSON geçmişi yeniden içe aktarma yok; Pro indirme mevcut. Geçmiş200 ile sınırlı; topluCSV500ile sınırlı ve ekran ilk50sonucu gösterir, indirmenin tümü tamdır.
 
 Model kıyas tablosu önceki deneyin kayıtlı sonuçlarıdır; yeni girdiye beş ayrı canlı model tahmini iddiası yok. Skorlar iflas yüzdesi değildir; tarihsel Polonya verisinin güncel Türkiye geçerliliği kanıtlanmamıştır. Content Flow PDF'leri ilk ders tesliminin tarihli kopyası; birleşik ekrandaki marka stratejisi entegrasyona göre güncellendi. Dört özgün proje asılları korunur. Resmî form gönderilmedi.
+
+## Son doğrulama — 11 Ekim 2026
+Canlı GitHub Pages yayını başarılı: c426ccc0cc72de5cb3df761153ffe37a9ddaa040, işlem 38079666528. Canlı Chrome içinde Basit örneği 0,1721, Pro 64 oran örneği 0,0017; mod geçişi geçti, konsol hatası yok. Son ekran Basit / Başlangıç olarak bırakıldı; canlı veriye test kaydı eklenmedi.
+25 canlı dosya kontrol edildi. 20 dosya byte olarak aynı; iki CSV ve üç altyazı dosyasında yalnız Git satır sonu normalleştirmesi var, metin/veri aynı. Kanıt: hub-evidence/live-verification.json ve hub-live.png.
+ZIP içinden çıkarılan kaynakta 12/12 test geçti. Yerel başlatıcı ve HTTP açılışı kontrol edildi; son ZIP yeniden üretildi ve CRC/tüm dosya byte eşliği doğrulandı. Kanıt: hub-evidence/package-verification.json.

@@ -1,0 +1,515 @@
+{
+  "version": "deallens-ml-v1-2026-10-09",
+  "selected": "CatBoost 64",
+  "data": {
+    "rows": 5910,
+    "class_counts": {
+      "0": 5500,
+      "1": 410
+    },
+    "partitions": {
+      "train": {
+        "rows": 3546,
+        "positive": 246
+      },
+      "validation": {
+        "rows": 1182,
+        "positive": 82
+      },
+      "test": {
+        "rows": 1182,
+        "positive": 82
+      }
+    },
+    "missing_cells": 4666,
+    "duplicate_extra_rows": 60
+  },
+  "models": [
+    {
+      "name": "Dummy",
+      "threshold": 0.5,
+      "accuracy": 0.9306260575296108,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "average_precision": 0.06937394247038917,
+      "roc_auc": 0.5,
+      "confusion_matrix": [
+        [
+          1100,
+          0
+        ],
+        [
+          82,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "Logistic 64",
+      "threshold": 0.9557462522890939,
+      "accuracy": 0.9509306260575296,
+      "precision": 0.7068965517241379,
+      "recall": 0.5,
+      "f1": 0.5857142857142857,
+      "average_precision": 0.6572013174841836,
+      "roc_auc": 0.9176164079822616,
+      "confusion_matrix": [
+        [
+          1083,
+          17
+        ],
+        [
+          41,
+          41
+        ]
+      ]
+    },
+    {
+      "name": "CatBoost 64",
+      "threshold": 0.3344732335154036,
+      "accuracy": 0.9627749576988156,
+      "precision": 0.7567567567567568,
+      "recall": 0.6829268292682927,
+      "f1": 0.717948717948718,
+      "average_precision": 0.7999703714179314,
+      "roc_auc": 0.9564301552106431,
+      "confusion_matrix": [
+        [
+          1082,
+          18
+        ],
+        [
+          26,
+          56
+        ]
+      ]
+    },
+    {
+      "name": "MLP 64",
+      "threshold": 0.5865391871904697,
+      "accuracy": 0.9509306260575296,
+      "precision": 0.6666666666666666,
+      "recall": 0.5853658536585366,
+      "f1": 0.6233766233766234,
+      "average_precision": 0.6496700193680292,
+      "roc_auc": 0.88490022172949,
+      "confusion_matrix": [
+        [
+          1076,
+          24
+        ],
+        [
+          34,
+          48
+        ]
+      ]
+    },
+    {
+      "name": "CatBoost without Attr27",
+      "threshold": 0.3083897571445752,
+      "accuracy": 0.9500846023688664,
+      "precision": 0.6619718309859155,
+      "recall": 0.573170731707317,
+      "f1": 0.6143790849673203,
+      "average_precision": 0.6816430900997963,
+      "roc_auc": 0.9202771618625277,
+      "confusion_matrix": [
+        [
+          1076,
+          24
+        ],
+        [
+          35,
+          47
+        ]
+      ]
+    }
+  ],
+  "dictionary": [
+    {
+      "key": "Attr1",
+      "label": "Net kâr / toplam varlıklar",
+      "formula": "net profit / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr2",
+      "label": "Toplam yükümlülükler / toplam varlıklar",
+      "formula": "total liabilities / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr3",
+      "label": "İşletme sermayesi / toplam varlıklar",
+      "formula": "working capital / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr4",
+      "label": "Dönen varlıklar / kısa vadeli yükümlülükler",
+      "formula": "current assets / short-term liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr5",
+      "label": "Nakit ve alacaklardan kısa vadeli yükümlülüklerin çıkarılmasına dayalı gün oranı",
+      "formula": "[(cash + short-term securities + receivables - short-term liabilities) / (operating expenses - depreciation)] * 365",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr6",
+      "label": "Dağıtılmamış kâr / toplam varlıklar",
+      "formula": "retained earnings / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr7",
+      "label": "Faiz ve vergi öncesi kâr / toplam varlıklar",
+      "formula": "EBIT / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr8",
+      "label": "Özsermaye defter değeri / toplam yükümlülükler",
+      "formula": "book value of equity / total liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr9",
+      "label": "Satışlar / toplam varlıklar",
+      "formula": "sales / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr10",
+      "label": "Özsermaye / toplam varlıklar",
+      "formula": "equity / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr11",
+      "label": "Brüt kâr ve ek kalemler / toplam varlıklar",
+      "formula": "(gross profit + extraordinary items + financial expenses) / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr12",
+      "label": "Brüt kâr / kısa vadeli yükümlülükler",
+      "formula": "gross profit / short-term liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr13",
+      "label": "Brüt kâr ve amortisman / satışlar",
+      "formula": "(gross profit + depreciation) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr14",
+      "label": "Brüt kâr ve faiz / toplam varlıklar",
+      "formula": "(gross profit + interest) / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr15",
+      "label": "Yükümlülük gün oranı",
+      "formula": "(total liabilities * 365) / (gross profit + depreciation)",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr16",
+      "label": "Brüt kâr ve amortisman / yükümlülükler",
+      "formula": "(gross profit + depreciation) / total liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr17",
+      "label": "Toplam varlıklar / yükümlülükler",
+      "formula": "total assets / total liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr18",
+      "label": "Brüt kâr / varlıklar",
+      "formula": "gross profit / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr19",
+      "label": "Brüt kâr / satışlar",
+      "formula": "gross profit / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr20",
+      "label": "Stok gün oranı",
+      "formula": "(inventory * 365) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr21",
+      "label": "Cari dönem satışları / önceki dönem satışları",
+      "formula": "sales (n) / sales (n-1)",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr22",
+      "label": "Faaliyet kârı / varlıklar",
+      "formula": "profit on operating activities / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr23",
+      "label": "Net kâr / satışlar",
+      "formula": "net profit / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr24",
+      "label": "Üç yıllık brüt kâr / varlıklar",
+      "formula": "gross profit (in 3 years) / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr25",
+      "label": "Özsermaye eksi sermaye / varlıklar",
+      "formula": "(equity - share capital) / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr26",
+      "label": "Net kâr ve amortisman / yükümlülükler",
+      "formula": "(net profit + depreciation) / total liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr27",
+      "label": "Faaliyet kârı / finansman giderleri",
+      "formula": "profit on operating activities / financial expenses",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr28",
+      "label": "İşletme sermayesi / duran varlıklar",
+      "formula": "working capital / fixed assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr29",
+      "label": "Toplam varlıkların logaritması",
+      "formula": "logarithm of total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir. Kaynak log tabanını belirtmiyor."
+    },
+    {
+      "key": "Attr30",
+      "label": "Yükümlülükler eksi nakit / satışlar",
+      "formula": "(total liabilities - cash) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr31",
+      "label": "Brüt kâr ve faiz / satışlar",
+      "formula": "(gross profit + interest) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr32",
+      "label": "Cari yükümlülük gün oranı",
+      "formula": "(current liabilities * 365) / cost of products sold",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr33",
+      "label": "Faaliyet giderleri / kısa vadeli yükümlülükler",
+      "formula": "operating expenses / short-term liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr34",
+      "label": "Faaliyet giderleri / toplam yükümlülükler",
+      "formula": "operating expenses / total liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr35",
+      "label": "Satış kârı / varlıklar",
+      "formula": "profit on sales / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr36",
+      "label": "Toplam satışlar / varlıklar",
+      "formula": "total sales / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr37",
+      "label": "Dönen varlıklar eksi stok / uzun vadeli yükümlülükler",
+      "formula": "(current assets - inventories) / long-term liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr38",
+      "label": "Sürekli sermaye / varlıklar",
+      "formula": "constant capital / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir. Constant capital bileşenleri kaynakta ayrıntılandırılmıyor."
+    },
+    {
+      "key": "Attr39",
+      "label": "Satış kârı / satışlar",
+      "formula": "profit on sales / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr40",
+      "label": "Nakit benzeri dönen varlıklar / kısa vadeli yükümlülükler",
+      "formula": "(current assets - inventory - receivables) / short-term liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr41",
+      "label": "Yükümlülükler / zamanla düzeltilmiş faaliyet kârı ve amortisman",
+      "formula": "total liabilities / ((profit on operating activities + depreciation) * (12/365))",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr42",
+      "label": "Faaliyet kârı / satışlar",
+      "formula": "profit on operating activities / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr43",
+      "label": "Alacak ve stok devir günlerinin toplamı",
+      "formula": "rotation receivables + inventory turnover in days",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr44",
+      "label": "Alacak gün oranı",
+      "formula": "(receivables * 365) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr45",
+      "label": "Net kâr / stok",
+      "formula": "net profit / inventory",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr46",
+      "label": "Dönen varlıklar eksi stok / kısa vadeli yükümlülükler",
+      "formula": "(current assets - inventory) / short-term liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr47",
+      "label": "Stok maliyet gün oranı",
+      "formula": "(inventory * 365) / cost of products sold",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr48",
+      "label": "Kaynak EBITDA tanımı / varlıklar",
+      "formula": "EBITDA (profit on operating activities - depreciation) / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir. Kaynak EBITDA adını kullanırken amortisman çıkarıyor; tanım belirsizliği düzeltilmeden korunmuştur."
+    },
+    {
+      "key": "Attr49",
+      "label": "Kaynak EBITDA tanımı / satışlar",
+      "formula": "EBITDA (profit on operating activities - depreciation) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir. Kaynak EBITDA adını kullanırken amortisman çıkarıyor; tanım belirsizliği düzeltilmeden korunmuştur."
+    },
+    {
+      "key": "Attr50",
+      "label": "Dönen varlıklar / yükümlülükler",
+      "formula": "current assets / total liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr51",
+      "label": "Kısa vadeli yükümlülükler / varlıklar",
+      "formula": "short-term liabilities / total assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr52",
+      "label": "Kısa vadeli yükümlülük maliyet gün oranı",
+      "formula": "(short-term liabilities * 365) / cost of products sold",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr53",
+      "label": "Özsermaye / duran varlıklar",
+      "formula": "equity / fixed assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr54",
+      "label": "Sürekli sermaye / duran varlıklar",
+      "formula": "constant capital / fixed assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir. Constant capital bileşenleri kaynakta ayrıntılandırılmıyor."
+    },
+    {
+      "key": "Attr55",
+      "label": "İşletme sermayesi tutarı",
+      "formula": "working capital",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir. Kaynak para birimi ve tutar ölçeğini belirtmiyor."
+    },
+    {
+      "key": "Attr56",
+      "label": "Satışlar eksi satılan ürünlerin maliyeti / satışlar",
+      "formula": "(sales - cost of products sold) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr57",
+      "label": "Kaynak işletme sermayesi ve satış gideri oranı",
+      "formula": "(current assets - inventory - short-term liabilities) / (sales - gross profit - depreciation)",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr58",
+      "label": "Toplam maliyetler / toplam satışlar",
+      "formula": "total costs / total sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr59",
+      "label": "Uzun vadeli yükümlülükler / özsermaye",
+      "formula": "long-term liabilities / equity",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr60",
+      "label": "Satışlar / stok",
+      "formula": "sales / inventory",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr61",
+      "label": "Satışlar / alacaklar",
+      "formula": "sales / receivables",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr62",
+      "label": "Kısa vadeli yükümlülük satış gün oranı",
+      "formula": "(short-term liabilities * 365) / sales",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr63",
+      "label": "Satışlar / kısa vadeli yükümlülükler",
+      "formula": "sales / short-term liabilities",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    },
+    {
+      "key": "Attr64",
+      "label": "Satışlar / duran varlıklar",
+      "formula": "sales / fixed assets",
+      "note": "Kaynak CSV ölçeği korunur; gerçek muhasebe kalemlerine dönüşüm teyit gerektirir."
+    }
+  ]
+}

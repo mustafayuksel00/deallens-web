@@ -1,0 +1,23 @@
+1
+00:00:00,336 --> 00:00:03,471
+Şirket incelemesine nereden başlayacaksın?
+
+2
+00:00:03,471 --> 00:00:05,150
+Sorunu yaz.
+
+3
+00:00:05,150 --> 00:00:07,634
+Kaynağı ve tarihi kaydet.
+
+4
+00:00:07,634 --> 00:00:12,852
+DealLens ile şirketlerini listele, notlarını düzenle, sonraki adımını takip et.
+
+5
+00:00:12,852 --> 00:00:14,950
+Eğitim demosunu aç.
+
+6
+00:00:14,950 --> 00:00:16,969
+İlk kaydını oluştur.

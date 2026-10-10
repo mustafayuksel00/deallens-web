@@ -1,0 +1,31 @@
+{
+  "count": 25,
+  "all_http_bytes_equal": true,
+  "files": [
+    "index.html",
+    "assets/index-DBrR9YA8.css",
+    "assets/index-Fn-jhAWs.js",
+    "assets/vendor-CnzLXlvJ.js",
+    "files/ML_Notebook.ipynb",
+    "files/ML_Rapor.pdf",
+    "files/Oran_Sozlugu.csv",
+    "files/Ornek_64_Oran.csv",
+    "files/Python_Notebook.ipynb",
+    "files/Python_Rapor.pdf",
+    "files/Python_Sunum.pptx",
+    "content/documents/DealLens_7_Gunluk_Takvim.xlsx",
+    "content/documents/DealLens_ContentFlow_Sunum.pdf",
+    "content/documents/DealLens_Marka_Sesi.pdf",
+    "content/documents/DealLens_Marka_Stratejisi.pdf",
+    "content/documents/DealLens_Ornek_Icerik_Seti.pdf",
+    "content/media/altyazi.ass",
+    "content/media/altyazi.srt",
+    "content/media/gorsel-01.png",
+    "content/media/gorsel-02.png",
+    "content/media/gorsel-03.png",
+    "content/media/seslendirme.mp3",
+    "content/media/seslendirme.vtt",
+    "content/media/tanitim-18sn.mp4",
+    "content/media/video-poster.jpg"
+  ]
+}

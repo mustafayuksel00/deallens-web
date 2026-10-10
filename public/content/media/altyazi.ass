@@ -1,0 +1,18 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,36,&H00FFFFFF,&H00FFFFFF,&H00353F17,&H00353F17,0,0,0,0,100,100,0,0,3,2,0,2,50,50,150,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.34,0:00:03.47,Default,,0,0,0,,Şirket incelemesine nereden başlayacaksın?
+Dialogue: 0,0:00:03.47,0:00:05.15,Default,,0,0,0,,Sorunu yaz.
+Dialogue: 0,0:00:05.15,0:00:07.63,Default,,0,0,0,,Kaynağı ve tarihi kaydet.
+Dialogue: 0,0:00:07.63,0:00:12.85,Default,,0,0,0,,DealLens ile şirketlerini listele, notlarını düzenle, sonraki adımını takip et.
+Dialogue: 0,0:00:12.85,0:00:14.95,Default,,0,0,0,,Eğitim demosunu aç.
+Dialogue: 0,0:00:14.95,0:00:16.97,Default,,0,0,0,,İlk kaydını oluştur.

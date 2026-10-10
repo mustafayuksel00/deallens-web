@@ -1,48 +1,35 @@
-# DealLens — Şirket Takibi
+# DealLens — dört proje, tek çalışma alanı
 
-Mustafa Yüksel · Software Persona · Web Geliştirme / Proje 3
+Mustafa Yüksel · Software Persona · 10 Ekim 2026
 
-React ile şirket inceleme kayıtlarını ekleme, listeleme, düzenleme ve silme uygulaması. Kayıtlar localStorage ile bu tarayıcıda saklanır. Arama, sektör/durum filtresi, özet kartları, silmeden vazgeçme ve JSON yedek indirme bulunur.
+Şirket takibi, çalışan finansal analiz ve Content Flow tek React uygulamasında. Basit/Pro seçimi sağ üstte; Pro ücretli bir servis değildir.
 
 ## Kullanım
-Şirket ekle → şirket adı, sektör, durum, isteğe bağlı gelir ve not → Şirketi kaydet. Satırdaki kalemle düzenle, çöp kutusuyla sil. Sayfa yenilendiğinde kayıtlar korunur. Gelir milyon TL cinsindendir; virgüllü ondalık kabul edilir. Yedek indir düğmesi kayıtların JSON kopyasını verir; içe aktarma bu sürümde yoktur.
+Canlı adres: https://mustafayuksel00.github.io/deallens-web/
 
-Örnek şirketler kurgusaldır. İnceleme durumu ve öncelik kullanıcı tarafından belirlenir. Bu web projesi ML tahmini yapmaz. Python/ML projeleri ayrı teslimdir; ortak arayüze entegrasyon ileride yapılabilir.
+- **Basit:** Şirketler → şirket ekle/düzenle/sil/filtrele. Satırdaki analiz oku şirketi Finansal analiz alanında seçer. Beş oranı gir → Analiz et → Analizi kaydet. Örneği doldur kurgusal değerleri getirir.
+- **Pro:** 64 oranlı ML, CSV ile500 kayda kadar analiz, indirilebilir sonuçlar, beş yöntemin önceden tamamlanmış test tablosu, karar ağacı yolu,64 oran sözlüğü, marka/prompt/kaynak ve notebook dosyaları.
+- **İçerik stüdyosu:** Gerçek üç görsel,18sn MP4, Türkçe MP3, blog, üç sosyal metin,7günlük takvim ve PDF/Excel. Sayfadan ayrılınca medya duraklar.
+- **Dört proje:** Her çalışmanın açıklaması, kullanım alanı, raporu; Pro modda Colab ve notebook indirme bağlantısı.
+- **Analiz geçmişi:** Kaydı yeniden aç, gerekirse oranları değiştirip tekrar hesapla. Son200analiz saklanır. Pro modda tüm geçmişi indir. Şirket silinse de geçmiş analiz, tarihli bağımsız kayıt olarak kalır.
 
-## Kurulum
-Node.js 20.19+ veya 22.12+ gerekir (kontrol edilen ortam 24.19.0).
+## Yerel paket
+DealLens_Birlesik_Basit_Pro.zip dosyasını tamamen çıkar. **DealLens-Baslat.bat** dosyasına çift tıkla. Python kurulu olmalı; bu bilgisayarda mevcut. Python model kütüphaneleri veya Node kurmak gerekmez. Sabit adres http://127.0.0.1:5276/ tarayıcıda açılır. Küçük sunucu penceresi kapanınca yerel uygulama durur; kayıtlar kalır. Yerel ZIP tüm uygulama, medya ve rapor dosyalarını taşır. Kod kaynağı kaynak/ altında bulunur.
 
-```sh
-npm ci
-npm run dev
-```
+Canlı site ve yerel uygulama farklı adreslerdir; tarayıcıdaki kayıtları ayrı tutulur. Aynı adresi kullan. Başka cihazla otomatik senkronizasyon yok. Şirketler alanından JSON yedeği; Pro analiz alanından geçmiş/tek analiz/toplu CSV sonucu indirilebilir. Geçmişi yeniden içe aktarma bu sürümde yok.
 
-```sh
-npm test
-npm run build
-npm run preview
-```
+## Modeller nasıl çalışır?
+Python projesindeki beş oranlı Decision Tree ve ML projesindeki seçilmiş64 oranlı CatBoost, mevcut eğitilmiş parametrelerden sayısal JSON'a aktarılmıştır. Tarayıcı medyan/eksik göstergesi, float32 karşılaştırmaları, ağaç dalları ve sigmoid hesaplamasını uygular. Girdi kullanıcı cihazında işlenir; Python/ML model sunucusu, kişisel veri gönderimi veya canlı piyasa bağlantısı yok.
 
-## Yapı
-- `src/Components`: şirket formu ve erişilebilir diyalog.
-- `src/Pages`: takip ekranı ve CRUD işlemleri.
-- `src/Interfaces`: kayıt yapısı, veri doğrulama ve depolama.
-- `tests`: gerçek veri sınırları ve kalıcılık testleri.
-- `docs`: GitHub Pages için üretilmiş statik sürüm.
-- `screenshots`: masaüstü ve mobil ekran görüntüleri.
+İki model toplam11.820 kaynak satırı tahmininde orijinal Python ile eşleşti: tüm etiketler aynı, en büyük skor farkı1,45e-15'ten küçük. Ayrıntı hub-evidence/model-parity.json. Test fikstürü orijinal modellerden üretilmiştir; tarayıcı uygulamasının kendi çıktısından üretilmez.
 
-React 19, Vite 7, Pure CSS ve Lucide simgeleri. Kesin bağımlılıklar package-lock.json içinde. Fontlar Google Fonts üzerinden gelir; ağ yoksa sistem fontu kullanılır. Veriler sunucuya gönderilmez; başka cihazla otomatik senkronize olmaz. Tarayıcı verilerini silmek kayıtları kaldırır; düzenli yedek alın. Bozuk depolama sessizce sıfırlanmaz, kaydetme hatası görünür.
+CSV: UTF-8, virgül/noktalı virgül/tab ayırıcı; Attr1–Attr64 başlıklarının tamamı gerekli. Boş hücreler medyanla tamamlanır; tümü boş kayıt, metin/NaN/sonsuz, eksik başlık, tekrarlanan sütun veya hatalı satır reddedilir. 2MB/500kayıt üst sınırı açık hata verir; sessizce kayıt atlanmaz. Örnek CSV6negatif/6pozitif tarihsel kayıttır. Ekranda ilk50toplu sonuç, indirmede tamamı bulunur.
 
-## Yönerge eşleştirmesi
-Modern JS kütüphanesi: React. Stil: Pure CSS. Components/Pages/Interfaces klasörleri mevcut. Ekle/listele/güncelle/sil mevcut. Ekran görüntüleri kaynak deposuna eklenir. Public GitHub ve canlı yayın bağlantıları TESLIM-KONTROL.md içinde.
+Model skoru kalibre edilmiş iflas yüzdesi değildir. Tarihsel Polonya verisi güncel Türkiye şirketlerine doğrudan genellenemez. Test verisi önceki eğitim çalışmalarında incelenmiştir; yeni dış test iddiası yok. Model kıyas tablosu geçmiş deneydir; her yeni girdi için beş model çalıştığı iddia edilmez. Finansal sonuçlar yatırım veya satın alma önerisi değildir.
 
-[Resmî yönerge](https://docs.google.com/document/d/13cxFoWiMSyQlOa2jBhCwlFdMiHUL1ph6qJYMRhZKbtU/edit),10 Ekim2026 kontrolü. Netlify veya muadili yayın kabul edilir; public teslim için GitHub Pages kullanılır.
+## Geliştirme ve kontrol
+Node24 ve sabit package-lock.json. `npm ci`, `npm test`, `npm run build`, `npm run dev`. npm test: şirket verisi, giriş ve depolama, CSV/dışa aktarma ve orijinal model eşliği kontrolleri. src/Components,src/Pages,src/Interfaces ayrımı korunur. Önceki şirketler localStorage anahtarı korunmuştur.
 
-AI destekli geliştirme kullanıldı. Kullanıcının projeyi kendi cümleleriyle açıklaması ve resmî form teslimi ayrı adımlardır.
+Model yeniden aktarımı scripts/export-hub-models.py ile, içerik kopyaları scripts/prepare-hub-assets.py ile mevcut ortak workspace'teki asıl Python/ML/Content Flow projelerinden üretilir. Bağımsız ZIP/Git klonunda uygulama ve test fikstürü hazırdır; asıl projeler olmadan yeniden export gerekmez.
 
-## Teslim bağlantıları
-- Canlı uygulama: https://mustafayuksel00.github.io/deallens-web/
-- Public kaynak: https://github.com/mustafayuksel00/deallens-web
-- Anlatım rehberi: ANLATIM-REHBERI.md
-- Kontrol kaydı: DELIVERY-2026-10-10.md
-
+docs/ GitHub Pages yayınıdır. Öğrenci raporlarının ilk teslim kopyaları korunur; birleşik ekrandaki marka stratejisi model entegrasyonuna göre güncellenmiştir. Eski DELIVERY-2026-10-10.md ilk Proje3'ün tarihli kontrolüdür; güncel kayıt HUB-DELIVERY-2026-10-10.md. Resmî form gönderilmedi.

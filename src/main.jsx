@@ -1,5 +1,6 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import Dashboard from './Pages/Dashboard.jsx';
+import Hub from './Pages/Hub.jsx';
 import './style.css';
-createRoot(document.getElementById('root')).render(<React.StrictMode><Dashboard/></React.StrictMode>);
+import './hub.css';
+createRoot(document.getElementById('root')).render(<React.StrictMode><Hub/></React.StrictMode>);
